@@ -1,0 +1,162 @@
+/* PageLogin.css */
+.loginPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #e0eafc; /* Arrière-plan bleu clair basé sur l'image fournie */
+}
+
+.videoContainer {
+    width: 50vw;
+    height: 100vh;
+    position: relative;
+}
+
+.backgroundVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.loginContainer {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.loginHeader {
+    position: absolute;
+    top: 20%; /* Ajustement vertical du logo */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px; /* Taille du conteneur du logo */
+    height: 100px; /* Assurez-vous que la hauteur et la largeur sont égales pour un cercle parfait */
+    border-radius: 50%; /* Rend le conteneur circulaire */
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.loginLogo {
+    width: 80px; /* Taille de l'image du logo */
+    height: auto;
+    border-radius: 50%; /* Rend l'image du logo circulaire */
+}
+
+.loginTitle {
+    margin-top: 120px; /* Espace pour le logo déplacé */
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.loginForm {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputGroup {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 30px; /* Bordures arrondies pour les champs de saisie */
+    padding: 0.5rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 13px;
+}
+
+.inputGroup input {
+    flex: 1; /* Prendre l'espace restant */
+    height: 40px; /* Hauteur fixe pour une taille cohérente */
+    border: none; /* Supprimer la bordure par défaut */
+    margin-left: 1rem; /* Espace après l'icône */
+    font-size: 1rem; /* Taille de police réactive */
+    outline: none; /* Supprimer le contour de mise en évidence */
+    
+}
+
+.inputIcon {
+    min-width: 24px; /* Ensure icons don't shrink */
+    color: #7a7a7a; /* Icon color */
+}
+.loginButton, .googleSignInButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; /* Espace entre l'icône et le texte */
+    height: 50px; /* Hauteur fixe pour taper facilement sur les appareils tactiles */
+    font-size: 1rem;
+    transition: background-color 0.3s; /* Transition en douceur de la couleur de fond au survol */
+    background-color: #4C9AFF; /* Couleur bleue d'origine */
+
+}
+
+.loginButton span, .googleSignInButton span {
+    display: block; /* Ensures proper spacing */
+}
+
+
+
+.loginButton:hover, .googleSignInButton:hover {
+    background-color: #3578E5; /* Couleur au survol */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Effet de soulèvement au survol */}
+
+.separator {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 1rem 0;
+    width: 100%;
+    text-align: center;
+}
+
+.signUpPrompt {
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 1rem;
+}
+
+.forgotPassword {
+    font-size: 0.9rem;
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 1rem;
+    align-self: flex-end;
+}
+
+@media (max-width: 768px) {
+    .loginPage {
+        flex-direction: column;
+    }
+  
+    .videoContainer, .loginContainer {
+        width: 90vw;
+        height: auto;
+        margin: 10px;
+    }
+  
+    .loginHeader {
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .loginForm {
+        width: auto;
+        padding: 0 2rem; /* Padding instead of margin for better edge spacing */
+    }
+    
+    .inputGroup input, .loginButton, .googleSignInButton {
+        font-size: 0.9rem; /* Slightly smaller font on small devices */
+    }
+}
